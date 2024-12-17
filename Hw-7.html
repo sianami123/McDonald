@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Hw-7.css" />
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="grid-container">
+        <div id="left-panel">
+          <div id="left-payment-details">
+            <div style="grid-column: 1/3">
+              <span id="sum-span">0 </span> <span>جمع کل سفارشات</span>
+            </div>
+            <div style="grid-column: 1/3">
+              <span id="service-span">0 </span>
+              <span>حق سرویس و کارمزد</span>
+            </div>
+            <div style="grid-column: 1/3">
+              <span id="discount-span">0 </span>
+              <span>تخفیف</span>
+            </div>
+            <div id="discount-code">
+              <div>
+                <button onclick="applyDiscountCode()" id="discount-code-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-check-lg"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"
+                    />
+                  </svg>
+                </button>
+                <input
+                  type="text"
+                  id="discount-code-input"
+                  placeholder="کد تخفیف"
+                />
+              </div>
+            </div>
+            <div id="total-price">
+              <span id="total-price-span">0 </span>
+              <span>مبلغ قابل پرداخت</span>
+            </div>
+            <button onclick="payOrder()" id="pay-order-button">
+              ثبت سفارش
+            </button>
+          </div>
+          <div id="cart-items"></div>
+        </div>
+        <!-- right-order-details -->
+        <div id="right-order-details">
+          <h1>رستوران مکدونالد شعبه تهران</h1>
+          <div id="product-details-grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-overlay"></div>
+    <div id="modal-container"></div>
+    <script src="Hw-7.js"></script>
+  </body>
+</html>
